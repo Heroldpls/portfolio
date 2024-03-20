@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../css/navbar.css";
+import PortfolioModel from "../PortfolioModel";
 
 function NavbarView() {
   const [location, setLocation] = useState("home"); // For button state.

@@ -1,7 +1,8 @@
 import { RouterProvider, createHashRouter, Navigate } from "react-router-dom";
 
-import RecipesPresenter from "./presenters/recipesPresenter.jsx";
+import HomePresenter from "./presenters/homePresenter";
 import PortfolioModel from "./PortfolioModel.js";
+import ProjectsPresenter from "./presenters/projectsPresenter";
 
 function makeRouter(model: PortfolioModel) {
   return createHashRouter([
@@ -10,12 +11,12 @@ function makeRouter(model: PortfolioModel) {
       element: <Navigate to="/home" />,
     },
     {
-      path: "/projects",
-      element: <ProjectsPresenter model={model} />,
+      path: "/home",
+      element: <HomePresenter model={model} />,
     },
     {
-      path: "/cv",
-      element: <CVPresenter model={model} />,
+      path: "/projects",
+      element: <ProjectsPresenter model={model} />,
     },
   ]);
 }

@@ -1,5 +1,5 @@
 interface PortfolioModel {
-  projectIds: {};
+  projectIds: String; // Temporary type!
 }
 
 export default PortfolioModel;
